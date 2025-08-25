@@ -18,18 +18,16 @@ DBD += grating.dbd
 
 # grating.dbd will be made up from these files:
 grating_DBD += base.dbd
+
+# Include dbd files from all support applications:
 grating_DBD += asyn.dbd
 grating_DBD += drvAsynIPPort.dbd
 grating_DBD += motorSupport.dbd
 grating_DBD += devSmarActMCSMotor.dbd
-
-# Include dbd files from all support applications:
 #grating_DBD += xxx.dbd
 
 # Add all the support libraries needed by this IOC
-#grating_LIBS += xxx
-grating_LIBS += asyn
-# grating_LIBS += motor
+grating_LIBS += asyn motor smarActMotor
 
 
 # grating_registerRecordDeviceDriver.cpp derives from grating.dbd
@@ -43,12 +41,12 @@ grating_SRCS_vxWorks += -nil-
 #grating_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
 
 # Link QSRV (pvAccess Server) if available
-ifdef EPICS_QSRV_MAJOR_VERSION
-    ps_LIBS += qsrv
-    ps_LIBS += $(EPICS_BASE_PVA_CORE_LIBS)
-    ps_DBD += PVAServerRegister.dbd
-    ps_DBD += qsrv.dbd
-endif
+# ifdef EPICS_QSRV_MAJOR_VERSION
+#     grating_LIBS += qsrv
+#     grating_LIBS += $(EPICS_BASE_PVA_CORE_LIBS)
+#     grating_DBD += PVAServerRegister.dbd
+#     grating_DBD += qsrv.dbd
+# endif
 
 # Finally link to the EPICS Base libraries
 grating_LIBS += $(EPICS_BASE_IOC_LIBS)

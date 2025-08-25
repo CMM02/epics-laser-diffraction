@@ -1,4 +1,4 @@
-record(motor, "grating:rot") {
-    field(DESC, "Grating Rotation Motor")
-    field(SCAN, "Passive")
-}
+# record(motor, "grating:rot") {
+#     field(DESC, "Grating Rotation Motor")
+#     field(SCAN, "Passive")
+# }
