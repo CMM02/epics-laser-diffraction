@@ -1,4 +1,4 @@
-record(ai, "Test") {
-    field(DESC, "description")
+record(motor, "grating:rot") {
+    field(DESC, "Grating Rotation Motor")
     field(SCAN, "Passive")
 }

@@ -33,9 +33,14 @@
 #SNCSEQ = $(MODULES)/seq-ver
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
+
+
 EPICS_BASE = /opt/epics/base-7.0.9
+SUPPORT = /opt/epics
 ASYN = /opt/epics/asyn-4.44.2
-SMARACT = /opt/epics/smaract-0.0.1
+MOTOR = $(SUPPORT)/motor-R7-3-1
+MOTOR_SMARACT = /opt/epics/smaract-0.0.1
+# -include $(MOTOR_SMARACT)/configure/RELEASE.local
 
 # Set RULES here if you want to use build rules from somewhere
 # other than EPICS_BASE:
