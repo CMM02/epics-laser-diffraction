@@ -5,3 +5,4 @@ Laser Diffraction Control System - EPICS Summer School 2025 Project
 - Magnus Meier
 - Claudia Panza 
 - Jonas Dube
+- Alessandro Del Vecchio
