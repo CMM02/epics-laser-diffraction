@@ -1,1 +1,6 @@
-example
+record(ai,"Diode:rdCur"){
+	field(DESC,"Current from photodiode")
+	field(DTYP,"stream")
+	field(EGU,"A")
+	field(INP,"@diode-ioc.proto rdCur KEYSIGHT")
+}
