@@ -16,9 +16,17 @@ grating_registerRecordDeviceDriver(pdbbase)
 ## Load record instances
 dbLoadRecords("../../gratingApp/Db/grating.db","user=iocadm")
 
-drvAsynIPPortConfigure("STAGE", "172.30.85.55:5000")
+# Configure controller
+drvAsynIPPortConfigure("STAGE", "172.30.85.55:5000", 0, 0, 0)
 
-epicsEnvSet("STREAM_PROTOCOL_PATH", "${TOP}/gratingApp/Db/grating.proto")
+# smarActMCSCreateController(const char *motorPortName, const char *ioPortName, int numAxes, double movingPollPeriod, double idlePollPeriod);
+smarActMCSCreateController("STAGE_MOTOR", "STAGE", 3, 0.02, 1.0, 0)
+
+
+# Controller port, axis number, controller channel
+# smarActMCSCreateAxis(const char *motorPortName, int axisNumber, int channel)
+smarActMCSCreateAxis("STAGE_MOTOR", 0, 1)
+
 
 
 iocInit()

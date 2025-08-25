@@ -1,4 +1,6 @@
-# record(motor, "grating:rot") {
-#     field(DESC, "Grating Rotation Motor")
-#     field(SCAN, "Passive")
-# }
+record(motor, "grating:motor") {
+    field(DESC, "Grating Motor")
+    field(DTYP, "asynMotor")
+    field(OUT, "@asyn(STAGE_MOTOR, 0)")
+    # field(OUT, "asyn(5000, 172.30.85.55, 3)")
+}
