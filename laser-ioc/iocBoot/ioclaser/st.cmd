@@ -14,7 +14,11 @@ dbLoadDatabase "../../dbd/laser.dbd"
 laser_registerRecordDeviceDriver(pdbbase) 
 
 ## Load record instances
-#dbLoadRecords("../../db/laser.db","user=iocadm")
+dbLoadRecords("../../db/laser.db","user=laser")
+
+drvAsynIPPortConfigure("LASER", "172.30.85.220:5555")
+
+epicsEnvSet("STREAM_PROTOCOL_PATH", "../../db")
 
 iocInit()
 

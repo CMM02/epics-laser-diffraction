@@ -18,6 +18,12 @@ DBD += laser.dbd
 
 # laser.dbd will be made up from these files:
 laser_DBD += base.dbd
+laser_DBD += asyn.dbd
+laser_DBD += stream-base.dbd
+laser_DBD += drvAsynIPPort.dbd
+
+laser_LIBS += stream
+laser_LIBS += asyn
 
 # Include dbd files from all support applications:
 #laser_DBD += xxx.dbd
@@ -34,14 +40,6 @@ laser_SRCS_vxWorks += -nil-
 
 # Add support from base/src/vxWorks if needed
 #laser_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
-
-# Link QSRV (pvAccess Server) if available
-ifdef EPICS_QSRV_MAJOR_VERSION
-    ps_LIBS += qsrv
-    ps_LIBS += $(EPICS_BASE_PVA_CORE_LIBS)
-    ps_DBD += PVAServerRegister.dbd
-    ps_DBD += qsrv.dbd
-endif
 
 # Finally link to the EPICS Base libraries
 laser_LIBS += $(EPICS_BASE_IOC_LIBS)
