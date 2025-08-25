@@ -2,4 +2,5 @@
 Laser Diffraction Control System - EPICS Summer School 2025 Project
 
 # Collobarators
-- Magnus Meier 
+- Magnus Meier
+- Claudia Panza 
