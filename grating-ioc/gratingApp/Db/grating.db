@@ -1,0 +1,4 @@
+record(ai, "Test") {
+    field(DESC, "description")
+    field(SCAN, "Passive")
+}

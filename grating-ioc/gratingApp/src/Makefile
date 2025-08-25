@@ -18,12 +18,16 @@ DBD += grating.dbd
 
 # grating.dbd will be made up from these files:
 grating_DBD += base.dbd
+grating_DBD += asyn.dbd
+grating_DBD += drvAsynIPPort.dbd
 
 # Include dbd files from all support applications:
 #grating_DBD += xxx.dbd
 
 # Add all the support libraries needed by this IOC
 #grating_LIBS += xxx
+grating_LIBS += asyn
+
 
 # grating_registerRecordDeviceDriver.cpp derives from grating.dbd
 grating_SRCS += grating_registerRecordDeviceDriver.cpp
