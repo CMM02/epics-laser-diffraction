@@ -25,7 +25,9 @@ smarActMCSCreateController("STAGE_MOTOR", "STAGE", 3, 0.02, 1.0, 0)
 
 # Controller port, axis number, controller channel
 # smarActMCSCreateAxis(const char *motorPortName, int axisNumber, int channel)
-smarActMCSCreateAxis("STAGE_MOTOR", 0, 1)
+smarActMCSCreateAxis("STAGE_MOTOR", 0, 0)
+smarActMCSCreateAxis("STAGE_MOTOR", 1, 1)
+smarActMCSCreateAxis("STAGE_MOTOR", 2, 2)
 
 
 
