@@ -1,6 +1,17 @@
-record(motor, "grating:motor") {
-    field(DESC, "Grating Motor")
+record(motor, "GRATING:ROT") {
+    field(DESC, "Grating Rotation Motor")
     field(DTYP, "asynMotor")
     field(OUT, "@asyn(STAGE_MOTOR, 0)")
-    # field(OUT, "asyn(5000, 172.30.85.55, 3)")
+}
+
+record(motor, "GRATING:TILT") {
+    field(DESC, "Grating Tilt Motor")
+    field(DTYP, "asynMotor")
+    field(OUT, "@asyn(STAGE_MOTOR, 1)")
+}
+
+record(motor, "GRATING:TRANS") {
+    field(DESC, "Grating Translation Motor")
+    field(DTYP, "asynMotor")
+    field(OUT, "@asyn(STAGE_MOTOR, 2)")
 }
