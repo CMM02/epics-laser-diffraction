@@ -1,0 +1,15 @@
+InTerminator = "\n";
+OutTerminator = "\n";
+
+rdIDN {
+	out "*IDN?"; in "%s"
+}
+
+#rdCur {
+#	out "MEAS:CURR?"; in "%s"
+#}
+
+#debug {
+#	ExtraInput = Ignore;
+#	out "%s"; in "%39c"
+#}

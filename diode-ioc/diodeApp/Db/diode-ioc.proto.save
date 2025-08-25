@@ -1,0 +1,14 @@
+TERMINATOR = LF;
+
+rdIDN {
+	out "*IDN?"; in "%s"
+}
+
+rdCur {
+	out "MEAS:CURR?"; in "%f"
+}
+
+debug {
+	ExtraInput = Ignore;
+	out "%s"; in "%39c"
+}

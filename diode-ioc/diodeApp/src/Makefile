@@ -16,6 +16,12 @@ PROD_IOC = diode
 # diode.dbd will be created and installed
 DBD += diode.dbd
 
+diode_DBD += base.dbd
+diode_DBD += stream-base.dbd
+diode_DBD += asyn.dbd
+diode_DBD += drvAsynIPPort.dbd
+
+
 # diode.dbd will be made up from these files:
 diode_DBD += base.dbd
 
@@ -24,6 +30,8 @@ diode_DBD += base.dbd
 
 # Add all the support libraries needed by this IOC
 #diode_LIBS += xxx
+diode_LIBS += stream
+diode_LIBS += asyn
 
 # diode_registerRecordDeviceDriver.cpp derives from diode.dbd
 diode_SRCS += diode_registerRecordDeviceDriver.cpp

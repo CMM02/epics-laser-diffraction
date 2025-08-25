@@ -28,6 +28,9 @@
 # Variables and paths to dependent modules:
 #MODULES = /path/to/modules
 #MYMODULE = $(MODULES)/my-module
+STREAM = /opt/epics/stream-2.8.24/
+ASYN = /opt/epics/asyn-4.44.2/
+
 
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ = $(MODULES)/seq-ver
