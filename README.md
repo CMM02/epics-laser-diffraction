@@ -1,0 +1,2 @@
+# epics-laser-diffraction
+Laser Diffraction Control System - EPICS Summer School 2025 Project 
