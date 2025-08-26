@@ -17,6 +17,23 @@ setCRng {
 	out "CURR:RANG %f"; @init {rdCRng;}
 }
 
+#getOperate {
+#	out ":INP:STAT?"; in "%s"
+#}
+
+#setOperate {
+#	out ":INP:STAT %s"; @init {getOperate;}
+#}
+
+
+getOperate {
+	out ":INP:STAT?"; in "%i"	
+}
+
+setOperate {
+	out ":INP:STAT %i"; @init {getOperate;}
+}
+
 
 debug {
 	ExtraInput = Ignore;
