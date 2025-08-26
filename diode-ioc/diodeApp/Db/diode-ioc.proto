@@ -1,15 +1,15 @@
-InTerminator = "\n";
-OutTerminator = "\n";
+Terminator = CR LF;
+InTerminator = LF;
 
 rdIDN {
-	out "*IDN?"; in "%s"
+	out "*IDN?"; in "%#s";
 }
 
-#rdCur {
-#	out "MEAS:CURR?"; in "%s"
-#}
+rdCur {
+	out "MEAS:CURR?"; in "%f"
+}
 
-#debug {
-#	ExtraInput = Ignore;
-#	out "%s"; in "%39c"
-#}
+debug {
+	ExtraInput = Ignore;
+	out "%s"; in "%39c"
+}

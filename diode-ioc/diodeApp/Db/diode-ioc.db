@@ -1,14 +1,15 @@
-#record(stringin,"Diode:rdCur") {
-#	field(DESC,"Current from photodiode")
-#	field(DTYP,"stream")
-#	#field(EGU,"A")
-#	field(SCAN, "1 second")
-#	field(INP,"@diode-ioc.proto rdCur KEYSIGHT")
-#}
+record(ai,"Diode:rdCur") {
+	field(DESC,"Current from photodiode")
+	field(DTYP,"stream")
+	#field(EGU,"A")
+	field(SCAN, "1 second")
+	field(INP,"@diode-ioc.proto rdCur KEYSIGHT")
+}
 
 record(stringin, "Diode:rdIDN") {
 	field(DESC, "IDN of the instrument")
 	field(DTYP, "stream")
 	field(INP, "@diode-ioc.proto rdIDN KEYSIGHT")
 	field(SCAN, "Passive")
+	field(PINI, "YES")
 }

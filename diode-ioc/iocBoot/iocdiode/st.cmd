@@ -18,7 +18,7 @@ diode_registerRecordDeviceDriver(pdbbase)
 ## Load record instances
 #dbLoadRecords("../../db/diode.db","user=iocadm")
 
-drvAsynIPPortConfigure("KEYSIGHT", "172.30.85.75:5024")
+drvAsynIPPortConfigure("KEYSIGHT", "172.30.85.75:5025")
 
 
 dbLoadRecords("../../db/diode-ioc.db")
