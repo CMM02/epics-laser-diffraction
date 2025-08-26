@@ -13,3 +13,21 @@ record(stringin, "Diode:rdIDN") {
 	field(SCAN, "Passive")
 	field(PINI, "YES")
 }
+
+
+record(ai, "Diode:rdCRng") {
+	field(DESC, "Read Current measurement range")
+	field(DTYP, "stream")
+	field(INP, "@diode-ioc.proto rdCRng KEYSIGHT")
+	field(SCAN, "1 second")
+	field(PINI, "YES")
+}
+
+
+record(ao, "Diode:setCRng") {
+	field(DESC, "Set the current range")
+	field(DTYP, "stream")
+	field(OUT, "@diode-ioc.proto setCRng KEYSIGHT")
+	field(VAL, 2e-6)
+	field(PINI, "YES")
+}

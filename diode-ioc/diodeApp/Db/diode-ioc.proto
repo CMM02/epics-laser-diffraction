@@ -9,6 +9,15 @@ rdCur {
 	out "MEAS:CURR?"; in "%f"
 }
 
+rdCRng {
+	out "CURR:RANG?"; in "%f"
+}
+
+setCRng {
+	out "CURR:RANG %f"; @init {rdCRng;}
+}
+
+
 debug {
 	ExtraInput = Ignore;
 	out "%s"; in "%39c"
