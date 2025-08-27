@@ -5,7 +5,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-1 minutes -18 seconds</start>
+  <start>-10 minutes</start>
   <end>now</end>
   <archive_rescale>STAGGER</archive_rescale>
   <foreground>
@@ -34,14 +34,14 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-4.5810000000000005E-8</min>
-      <max>4.021E-8</max>
+      <min>45.0</min>
+      <max>155.0</max>
       <grid>false</grid>
       <autoscale>true</autoscale>
       <log_scale>false</log_scale>
     </axis>
     <axis>
-      <visible>true</visible>
+      <visible>false</visible>
       <name>Value 2</name>
       <use_axis_name>false</use_axis_name>
       <use_trace_names>true</use_trace_names>
@@ -68,10 +68,44 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-3.7956E7</min>
-      <max>-2.9464E7</max>
+      <min>-5.5E7</min>
+      <max>5.5E7</max>
       <grid>false</grid>
       <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+    </axis>
+    <axis>
+      <visible>true</visible>
+      <name>Value 4</name>
+      <use_axis_name>false</use_axis_name>
+      <use_trace_names>true</use_trace_names>
+      <right>false</right>
+      <color>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+      </color>
+      <min>-9.600000000000001E-7</min>
+      <max>2.896E-5</max>
+      <grid>false</grid>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+    </axis>
+    <axis>
+      <visible>true</visible>
+      <name>Value 5</name>
+      <use_axis_name>false</use_axis_name>
+      <use_trace_names>true</use_trace_names>
+      <right>false</right>
+      <color>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+      </color>
+      <min>-4.2E8</min>
+      <max>6.0E7</max>
+      <grid>false</grid>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
     </axis>
   </axes>
@@ -82,7 +116,7 @@
       <display_name>Diode:rdCur</display_name>
       <visible>true</visible>
       <name>Diode:rdCur</name>
-      <axis>0</axis>
+      <axis>3</axis>
       <color>
         <red>255</red>
         <green>0</green>
@@ -97,12 +131,17 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
+      <archive>
+        <name>pbraw://172.30.85.46:17665/retrieval/</name>
+        <url>pbraw://172.30.85.46:17665/retrieval/</url>
+        <key>1</key>
+      </archive>
     </pv>
     <pv>
       <display_name>laser:CYCLE</display_name>
       <visible>true</visible>
       <name>laser:CYCLE</name>
-      <axis>1</axis>
+      <axis>0</axis>
       <color>
         <red>0</red>
         <green>255</green>
@@ -117,12 +156,17 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
+      <archive>
+        <name>pbraw://172.30.85.46:17665/retrieval/</name>
+        <url>pbraw://172.30.85.46:17665/retrieval/</url>
+        <key>1</key>
+      </archive>
     </pv>
     <pv>
       <display_name>GRATING:ROT</display_name>
       <visible>true</visible>
       <name>GRATING:ROT</name>
-      <axis>2</axis>
+      <axis>4</axis>
       <color>
         <red>0</red>
         <green>0</green>
@@ -137,6 +181,11 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
+      <archive>
+        <name>pbraw://172.30.85.46:17665/retrieval/</name>
+        <url>pbraw://172.30.85.46:17665/retrieval/</url>
+        <key>1</key>
+      </archive>
     </pv>
   </pvlist>
 </databrowser>
