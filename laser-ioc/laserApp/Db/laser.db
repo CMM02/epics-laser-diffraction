@@ -6,6 +6,9 @@ record(ao, "$(user):CYCLE"){
     field(DRVL, "0")
     field(DRVH, "100")
     field(PREC, "1")
+    field(FLNK, "$(user):RBK")
+    field(HOPR, "100")
+    field(LOPR, "0")
 }
 
 record(bo, "$(user):ENABLE") {
@@ -14,4 +17,18 @@ record(bo, "$(user):ENABLE") {
     field(OUT,  "@laser.proto enablePWM LASER")
     field(ZNAM, "OFF")
     field(ONAM, "ON")
+}
+
+record(ai, "$(user):RBK"){
+    field(DESC, "Readback")
+    field(DTYP, "stream")
+    field(EGU,  "%")
+    field(INP, "@laser.proto getPWM LASER")
+    field(FLNK, "$(user):DONE")
+}
+
+record(calc, "$(user):DONE"){
+    field(INPA, "$(user):CYCLE")
+    field(INPB, "$(user):RBK")
+    field(CALC, "ABS(A-B)<0.1?1:0")
 }

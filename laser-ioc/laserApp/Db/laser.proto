@@ -1,19 +1,14 @@
-#setPWM {
-#    out "PWM_SET %f";
-#}
-
-#enablePWM {
-#    out "PWM_ENABLE %d";
-#}
-
 Terminator = LF;
 
 setPWM {
     out "PWM_SET %f";
-    #in "OK";
 }
 
 enablePWM {
     out "PWM_ENABLE %d";
-    #in "OK";
+}
+
+getPWM {
+    out "PWM_GET";
+    in "%f";
 }
