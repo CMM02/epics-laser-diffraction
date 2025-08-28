@@ -5,7 +5,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-10 minutes</start>
+  <start>-31.31 seconds</start>
   <end>now</end>
   <archive_rescale>STAGGER</archive_rescale>
   <foreground>
@@ -51,14 +51,14 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>45.0</min>
-      <max>155.0</max>
+      <min>2.767920595533499E-6</min>
+      <max>5.3253796526054585E-6</max>
       <grid>false</grid>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
     </axis>
     <axis>
-      <visible>true</visible>
+      <visible>false</visible>
       <name>Value 3</name>
       <use_axis_name>false</use_axis_name>
       <use_trace_names>true</use_trace_names>
@@ -68,10 +68,10 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-5.5E7</min>
-      <max>5.5E7</max>
+      <min>3.860684863523573E7</min>
+      <max>5.034600496277915E7</max>
       <grid>false</grid>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
     </axis>
     <axis>
@@ -85,8 +85,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-9.600000000000001E-7</min>
-      <max>2.896E-5</max>
+      <min>5.26241E-5</min>
+      <max>5.2951900000000004E-5</max>
       <grid>false</grid>
       <autoscale>true</autoscale>
       <log_scale>false</log_scale>
@@ -102,10 +102,10 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-4.2E8</min>
-      <max>6.0E7</max>
+      <min>450000.0</min>
+      <max>1550000.0</max>
       <grid>false</grid>
-      <autoscale>false</autoscale>
+      <autoscale>true</autoscale>
       <log_scale>false</log_scale>
     </axis>
   </axes>
@@ -130,12 +130,7 @@
       <waveform_index>0</waveform_index>
       <period>0.0</period>
       <ring_size>5000</ring_size>
-      <request>OPTIMIZED</request>
-      <archive>
-        <name>pbraw://172.30.85.46:17665/retrieval/</name>
-        <url>pbraw://172.30.85.46:17665/retrieval/</url>
-        <key>1</key>
-      </archive>
+      <request>RAW</request>
     </pv>
     <pv>
       <display_name>laser:CYCLE</display_name>
@@ -155,12 +150,7 @@
       <waveform_index>0</waveform_index>
       <period>0.0</period>
       <ring_size>5000</ring_size>
-      <request>OPTIMIZED</request>
-      <archive>
-        <name>pbraw://172.30.85.46:17665/retrieval/</name>
-        <url>pbraw://172.30.85.46:17665/retrieval/</url>
-        <key>1</key>
-      </archive>
+      <request>RAW</request>
     </pv>
     <pv>
       <display_name>GRATING:ROT</display_name>
@@ -180,12 +170,47 @@
       <waveform_index>0</waveform_index>
       <period>0.0</period>
       <ring_size>5000</ring_size>
-      <request>OPTIMIZED</request>
-      <archive>
-        <name>pbraw://172.30.85.46:17665/retrieval/</name>
-        <url>pbraw://172.30.85.46:17665/retrieval/</url>
-        <key>1</key>
-      </archive>
+      <request>RAW</request>
+    </pv>
+    <pv>
+      <display_name>Diode:rdCur</display_name>
+      <visible>false</visible>
+      <name>Diode:rdCur</name>
+      <axis>1</axis>
+      <color>
+        <red>255</red>
+        <green>127</green>
+        <blue>0</blue>
+      </color>
+      <trace_type>AREA</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>SOLID</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>5000</ring_size>
+      <request>RAW</request>
+    </pv>
+    <pv>
+      <display_name>GRATING:ROT</display_name>
+      <visible>false</visible>
+      <name>GRATING:ROT</name>
+      <axis>2</axis>
+      <color>
+        <red>0</red>
+        <green>255</green>
+        <blue>127</blue>
+      </color>
+      <trace_type>AREA</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>SOLID</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>5000</ring_size>
+      <request>RAW</request>
     </pv>
   </pvlist>
 </databrowser>
