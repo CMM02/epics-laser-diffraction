@@ -2,16 +2,47 @@ record(motor, "GRATING:ROT") {
     field(DESC, "Grating Rotation Motor")
     field(DTYP, "asynMotor")
     field(OUT, "@asyn(STAGE_MOTOR, 0)")
+    field(EGU, "microDegrees")
+    field(LOW, "0")
+    field(LOLO, "10000000")
+    field(HIGH, "350000000")
+    field(HIHI, "360000000")
+    field(LSV, "MINOR")
+    field(LLSV, "MAJOR")
+    field(HSV, "MINOR")
+    field(HHSV, "MAJOR")
+    field(TWV, "5000000")
+    
 }
 
 record(motor, "GRATING:TILT") {
     field(DESC, "Grating Tilt Motor")
     field(DTYP, "asynMotor")
     field(OUT, "@asyn(STAGE_MOTOR, 1)")
+    field(EGU, "microDegrees")
+    field(LOW, "0")
+    field(LOLO, "10000000")
+    field(HIGH, "350000000")
+    field(HIHI, "360000000")
+    field(LSV, "MINOR")
+    field(LLSV, "MAJOR")
+    field(HSV, "MINOR")
+    field(HHSV, "MAJOR")
+    field(TWV, "5000000")
 }
 
 record(motor, "GRATING:TRANS") {
     field(DESC, "Grating Translation Motor")
     field(DTYP, "asynMotor")
     field(OUT, "@asyn(STAGE_MOTOR, 2)")
+    field(EGU, "micrometers")
+    field(LOW, "0")
+    field(LOLO, "10000000")
+    field(HIGH, "350000000")
+    field(HIHI, "360000000")
+    field(LSV, "MINOR")
+    field(LLSV, "MAJOR")
+    field(HSV, "MINOR")
+    field(HHSV, "MAJOR")
+    field(TWV, "5000000")
 }
