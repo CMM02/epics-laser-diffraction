@@ -2,8 +2,9 @@ record(ai,"Diode:rdCur") {
 	field(DESC,"Current from photodiode")
 	field(DTYP,"stream")
 	#field(EGU,"A")
-	field(SCAN, "1 second")
+	#field(SCAN, ".5 second")
 	field(INP,"@diode-ioc.proto rdCur KEYSIGHT")
+	field(PREC, 10)
 }
 
 record(stringin, "Diode:rdIDN") {
@@ -64,4 +65,17 @@ record(bo, "Diode:setOperate") {
 	field(DTYP, "stream")
 	field(ZNAM, "OFF")
 	field(ONAM, "ON")
+}
+
+record(bi, "Diode:readTrigger") {
+	field(DESC, "Trigger to read current")
+	field(SCAN, "1 second")
+	field(FLNK, "Diode:rdCur")
+	field(DISV, "0")
+	field(SDIS, "Diode:triggerSwitch")
+}
+
+record(bi, "Diode:triggerSwitch") {
+	field(DESC, "Switch triggering of read current")
+	field(VAL,  "1")
 }
